@@ -18,6 +18,7 @@
 	// smth.com?id=3
 	// get id from url
 	// use isset to get parameters from clients
+	// if the field for 'id' is filled or not null, set student.id = $_GET['id'], otherwise die the statement;
 	$student->id = isset($_GET['id']) ? $_GET['id'] : die();
 
 

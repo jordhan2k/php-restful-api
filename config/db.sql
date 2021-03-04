@@ -24,6 +24,7 @@ CREATE TABLE `registration` (
  CONSTRAINT `fk1` FOREIGN KEY (`studentID`) REFERENCES `student` (`id`),
  CONSTRAINT `fk2` FOREIGN KEY (`courseID`) REFERENCES `course` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1000000003 DEFAULT CHARSET=latin1;
+
 -- student	
 CREATE TABLE `student` (
  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
