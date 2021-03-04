@@ -63,11 +63,11 @@ class Student{
 	public function createStudent(){
 		$query = 'INSERT INTO '. $this->table. 
 		' SET
-			firstName := firstName,
-			lastName := lastName,
-			dob := dob,
-			address := address,
-			gender := gender';
+			firstName =:firstName,
+			lastName =:lastName,
+			dob =:dob,
+			address =:address,
+			gender =:gender';
 
 		// preparedStatement
 		$ps = $this->conn->prepare($query);
@@ -89,18 +89,12 @@ class Student{
 
 		// execute query
 		if ($ps->execute()){
-
-
 			return true;
 		} else {
-
 			// print error
 			printf('Error: %s.\n', $ps->error);
-
 			return false;
 		}
-
-
 	}
 
 }
